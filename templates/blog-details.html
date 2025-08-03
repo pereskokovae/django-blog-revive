@@ -14,7 +14,7 @@
             <h1>Blog details</h1>
             <nav aria-label="breadcrumb" class="banner-breadcrumb">
               <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">{% url 'index' %}</a></li>
+                <li class="breadcrumb-item"> <a href="{% url 'index' %}"></a></li>
                 <li class="breadcrumb-item active" aria-current="page">Blog Details</li>
               </ol>
             </nav>
@@ -68,12 +68,10 @@
                   <div class="user justify-content-between d-flex">
                     <div class="desc">
                       {% for comment in post.comments %}
-                      <h5><a href="#">{{ comment.author }}</a></h5>
-                      <p class="date">{{ comment.published_at }}</p>
-                      <p class="comment">
-                          {{ comment.text }}
+                        <h5><a href="#">{{ comment.author }}</a></h5>
+                        <p class="date">{{ comment.published_at }}</p>
+                        <p class="comment">{{ comment.text }}</p>
                       {% endfor %}
-                      </p>
                     </div>
                   </div>
                   <div class="reply-btn">
